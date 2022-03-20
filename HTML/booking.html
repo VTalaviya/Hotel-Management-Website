@@ -142,34 +142,13 @@
               <h4>Any Special Instructions for us ?</h4>
               <textarea rows="5" style="resize: none;" placeholder="Any special services you want from us at arrival time (extra charges may apply*)"></textarea>
               <div class="btn-block">
-                <button type="button">Make Payment</button>
+                <button type="button" onclick="gotopayment()">Make Payment</button>
                 <button style="margin:10px;"type="reset">Clear</button>
               </div>
             </form>
           </div>
     </body>
     
-    <script type="text/javascript">
-      function getPackageDetails()
-      {
-        let pkcg =  sessionStorage.getItem('Package');
-
-        if(pkcg=="Platinum")
-        document.getElementById("pkcg").selectedIndex = 3;
-        else if(pkcg=="Delux")
-        document.getElementById("pkcg").selectedIndex = 2;
-        else if(pkcg=="Gold")
-        document.getElementById("pkcg").selectedIndex = 1;
-        else
-        document.getElementById("pkcg").selectedIndex = 0;
-      }
-      function getAccountData()
-      {   
-          document.getElementById("name").value = localStorage.getItem("Name");
-          document.getElementById("email").value = localStorage.getItem("Email");
-          getPackageDetails();
-      }
-    </script>
-    <noscript>Sorry Your Browser Does not Support JavaScript !!!</noscript>
+   
 </html>
 
